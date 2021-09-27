@@ -4,7 +4,34 @@
   box-sizing: border-box;
 }
 
-body {
+:root {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    220deg,
+    rgba(189, 0, 255, 1) 0%,
+    rgba(0, 163, 255, 1) 100%
+  );
+  height: 100vh;
+  background-attachment: fixed; /* KEEPS BG STILL */
+  font-family: "Poppins";
+}
+
+.container {
+  margin: 1em 0.5em;
+  height: calc(100% - 2em);
+}
+
+section {
+  background: #221f26 url("./bg.svg");
+  background-size: cover;
+  background-blend-mode: screen;
+  background-position: -100px;
+  height: 100%;
+}
+
+nav {
 }
