@@ -5,8 +5,7 @@
 }
 
 :root {
-  margin: 0;
-  padding: 0;
+  --primary-color: #2d7dff;
 }
 
 body {
@@ -26,12 +25,82 @@ body {
 }
 
 section {
-  background: #221f26 url("./bg.svg");
+  background: #221f26 url("./bg.jpg");
   background-size: cover;
   background-blend-mode: screen;
   background-position: -100px;
   height: 100%;
+  padding: 2em;
 }
 
 nav {
+  display: none;
+}
+
+header {
+  display: flex;
+}
+
+.logo {
+  color: var(--primary-color);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: -0.1rem;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.menu-btn {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 3rem;
+  font-size: clamp(2.5rem, -0.875rem + 8.333vw, 4rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+  line-height: 89%;
+}
+
+.cv {
+  display: grid;
+  place-items: center;
+  height: 80%;
+}
+
+.content p {
+  font-size: 2.1rem;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 3rem);
+  font-weight: 300;
+  line-height: 111%;
+  color: #847d93;
+  margin-top: 1.1em;
+}
+
+.cta {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 2.875%;
+  display: inline-block;
+  border: 1px solid #4d4d4d;
+  padding: 1.25em 1.25em 1.25em 4em;
+  position: relative;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  background: url("arrow.svg") no-repeat;
+  width: 1.5em;
+  height: 1.5em;
+  left: 1.25em;
+}
+
+.cta:hover {
+  background: var(--primary-color);
 }
