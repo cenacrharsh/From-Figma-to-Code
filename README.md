@@ -1,7 +1,14 @@
 # From Figma To Code
 
-01| - | [Simple Card](https://github.com/cenacrharsh/Simple-Card-From-Figma-To-Code) | [Demo](https://cenacrharsh.github.io/Simple-Card-From-Figma-To-Code/) ✅
+No. | Project        | GitHub Repo            | Demo
+--|-----------|------------------------|---
+01| - | []() | []() ✅
 02| - | []() | []() ✅
 03| - | []() | []() ✅
 04| - | []() | []() ✅
 05| - | []() | []() ✅
+06| - | []() | []() ✅
+07| - | []() | []() ✅
+08| - | []() | []() ✅
+09| - | []() | []() ✅
+10| - | []() | []() ✅
