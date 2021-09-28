@@ -15,7 +15,7 @@ body {
     rgba(0, 163, 255, 1) 100%
   );
   height: 100vh;
-  background-attachment: fixed; /* KEEPS BG STILL */
+  background-attachment: fixed;
   font-family: "Poppins";
 }
 
@@ -34,19 +34,19 @@ section {
   border-radius: 13px;
 }
 
-header {
-  display: flex;
-}
-
 .logo {
   color: var(--primary-color);
   font-weight: 800;
   text-transform: uppercase;
   font-size: 1.5rem;
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.1em;
   text-align: center;
   width: 100%;
   margin: 0;
+}
+
+header {
+  display: flex;
 }
 
 .menu-btn {
@@ -54,7 +54,6 @@ header {
 }
 
 h1 {
-  font-size: 3rem;
   font-size: clamp(2.5rem, -0.875rem + 8.333vw, 4rem);
   font-weight: 800;
   text-transform: uppercase;
@@ -69,7 +68,6 @@ h1 {
 }
 
 .content p {
-  font-size: 2.1rem;
   font-size: clamp(2rem, -0.875rem + 8.333vw, 3rem);
   font-weight: 300;
   line-height: 111%;
@@ -82,10 +80,10 @@ h1 {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  margin-top: 2.875%;
+  margin-top: 2.875em;
   display: inline-block;
   border: 1px solid #4d4d4d;
-  padding: 1.25em 1.25em 1.25em 4em;
+  padding: 1.25em 1.25em 1.25em calc(2.5em + 1.5em);
   position: relative;
 }
 
@@ -102,17 +100,6 @@ h1 {
   background: var(--primary-color);
 }
 
-.back-btn {
-  transform: scaleX(-1);
-  padding: 3em 4em 2em;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.back-btn:hover {
-  transform: scaleX(-1) translateX(6px);
-}
-
 nav {
   position: fixed;
   z-index: 1;
@@ -121,8 +108,8 @@ nav {
   top: 0;
   height: 100vh;
   max-width: 300px;
-  transform: translate(-100%);
-  transition: transform .3s;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
 }
 
 nav ul {
@@ -146,10 +133,75 @@ nav ul li a:hover {
   background: #413e47;
 }
 
+.back-btn {
+  transform: scaleX(-1);
+  padding: 3em 4em 2em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.back-btn:hover {
+  transform: scaleX(-1) translateX(6px);
+}
+
 .active {
   background: var(--primary-color);
 }
-
 .active:hover {
   background: #4497ff;
+}
+
+@media only screen and (min-width: 700px) {
+  .left-col {
+    display: flex;
+  }
+
+  .content p {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  nav {
+    position: unset;
+    transform: translateX(0) !important;
+    border-radius: unset;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    height: 100%;
+  }
+
+  .menu-btn,
+  .back-btn {
+    display: none;
+  }
+
+  ul {
+    margin-top: 4em;
+  }
+
+  header {
+    padding: 1.6em;
+  }
+  .container {
+    display: flex;
+    padding: 2em;
+  }
+  .logo {
+    text-align: left;
+  }
+
+  section {
+    border-radius: unset;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    width: 100%;
+    background-size: cover;
+    background-position: 0;
+    background-attachment: unset;
+  }
+
+  .content {
+    justify-self: left;
+    margin-left: 4em;
+  }
 }
