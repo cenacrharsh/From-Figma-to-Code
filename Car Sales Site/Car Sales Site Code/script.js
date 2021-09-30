@@ -4,6 +4,8 @@ const panel = document.querySelector(".filter");
 
 const panelStyles = window.getComputedStyle(panel);
 
+const hearts = document.querySelectorAll(".far");
+
 // Js doesn't have access to styles applied to HTML elements through CSS files so we use getComputedStyles
 
 menuBtn.addEventListener("click", () => {
@@ -22,3 +24,8 @@ document.addEventListener("mouseup", (event) => {
     }
   }
 });
+
+function changeHeart(x) {
+  x.classList.toggle("fas");
+  x.classList.toggle("far");
+}
