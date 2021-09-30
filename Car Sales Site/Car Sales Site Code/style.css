@@ -4,7 +4,8 @@ body {
   padding: 0;
 }
 
-*.*::before,
+*,
+*:before,
 *:after {
   box-sizing: border-box;
 }
@@ -48,4 +49,53 @@ h1 {
 
 .search:focus {
   outline: thin dotted;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3em;
+}
+
+.far,
+.fas {
+  cursor: s;
+}
+
+.menu {
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+
+.labels,
+.cars {
+  margin: -1em -1em 2em;
+  padding: 1em;
+  border-radius: 6px;
+}
+
+.cars:hover {
+  background: white;
+}
+
+.car-name {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1.22rem;
+}
+
+.car-location {
+  color: var(--text-color);
+  font-size: 1.125rem;
+}
+
+.cols-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-price {
+  font-size: 1.5rem;
+  margin: 0;
 }
